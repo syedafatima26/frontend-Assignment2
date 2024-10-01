@@ -1,0 +1,376 @@
+body
+{
+  align-items: center;
+  height: 100vh;
+  justify-content: center;}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: rgb(66, 186, 255); 
+  font-size: 100px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a.active {
+  background-color: #61abff; 
+  color: white; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+}
+
+.intro {
+  position: relative;
+  width: auto; 
+  height: 120px;
+  background-color: #f2f2f2; 
+  margin: 20px auto;
+  border-radius: 20px; 
+  border:solid;
+
+  
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    background-color: #f2f2f2;
+    height: 40px; 
+    width: 40px; 
+    border-radius: 50%;
+  }
+
+  &::before {
+    left: 0;
+    bottom: 100px;
+    border: solid;
+  }
+
+  &::after {
+    right: 0;
+    bottom: 100px;
+    border: solid;
+  }
+}
+
+.intro h1{
+  font-size: 20px;
+  text-align: center;
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+h3 {
+  text-align: justify;
+  font-size: 50px;
+  text-align: center;
+  color: #bc0000;
+  margin: 30px;
+  margin-left: 60px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+h3:hover {
+  font-size: 35px;
+  color: #ffffff;
+  transition: color 0.3s; 
+}
+
+.projects-container {
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.projects-container hr {
+  border: 1px solid lightgray;
+  width: 75%;
+  margin-left: 5cm;
+}
+
+.project-card {
+  margin: 0 15px 15px 30px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.project-card h2{
+  font-size: 30px;
+  text-align: center;
+  margin: 30px auto;
+  color: #333;
+}
+.project-card h2:hover{
+  transition: 1s ease-in-out;
+  color: #bc0000;
+  text-decoration: underline;
+}
+
+.all_views {
+      display: flex;
+      flex-direction: row;
+      flex-flow: wrap;
+    }
+
+    .card {
+      width: 500px;
+      max-width: 400px;
+      min-width: 300px;
+      height: 250px;
+      background-color: #292929;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+      border: 2px solid rgba(7, 7, 7, 0.12);
+      font-size: 16px;
+      transition: all 0.3s ease;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+    }
+
+   .icon {
+      margin: 0 auto;
+      width: 100%;
+      height: 80px;
+      max-width: 80px;
+      background: linear-gradient(90deg, #7eaaff 0%, #ff48fb 40%, rgba(0, 0, 0, 0.28) 60%);
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.8s ease;
+      background-position: 0px;
+      background-size: 200px;
+    }
+
+    
+.icon svg {
+  fill: white;
+}
+
+.card .title {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.card .text {
+  width: 90%;
+  margin:0 auto;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-weight: 200%;
+  letter-spacing: 1px;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  height: 310px;
+}
+
+.card:hover .text {
+  transition: all 0.3s ease;
+  opacity: 1;
+  max-height: 40px;
+}
+
+.card:hover .icon {
+  background-position: -120px;
+  transition: all 0.3s ease;
+}
+
+.card:hover .icon svg path {
+  fill: url('#gradientColor');
+  transition: all 0.3s ease;
+}
+
+
+.section-title {
+  font-family:Arial, Helvetica, sans-serif;
+  margin-bottom: 50px;
+}
+
+.section-title h2{
+  font-size: 25px;
+  text-align: center;
+  margin: 30px auto;
+  color: #333;
+  transition: 1s ease-in-out;
+}
+.section-title h2:hover {
+  color: #bc0000;
+  text-decoration: underline;
+}
+
+.iconbutton{
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #bc0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.new {
+  border: 1px solid gray;
+  display: block;
+  border-radius: 6px;
+  margin: 50px;
+  padding: 10px;
+  width:auto;
+  box-shadow: 0 3px 10px gray;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-image: url('art1.jpg');
+  background-size:auto; 
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+.new h4 {
+  text-align: center;
+  font-size: 20px;
+  margin-block-start: 8px;
+  margin-block-end: 5px;
+  color: #000000;
+  text-decoration:underline;
+} 
+.new p {
+  align-items: left;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+} 
+
+.new ul{
+  list-style-position: inside;
+}
+
+
+#contact-us {
+  padding: 50px 0;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+#contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #bc0000;
+  transition: 0.3s;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
